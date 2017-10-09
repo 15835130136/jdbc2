@@ -41,11 +41,7 @@ public class StatementDemo {
 		 String sql = "create table student(id number(20),name varchar2(20),gender varchar2(20))";
 		 String sql2 = "drop table student";
 		 stmt.execute(sql2);
-		 Boolean flag =  stmt.execute(sql);
-		 System.out.println(flag);
-		 if(flag==true){
-			 System.out.println("student表创建成功!");
-		 }
+		 stmt.execute(sql);
 		 stmt.close();
 		 conn.close();
 	 }
