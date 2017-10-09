@@ -26,6 +26,13 @@ public class Demo {
 		Demo.password = password;
 	}
 	
+	/**
+	 * 
+	 * @param url
+	 * @param userName
+	 * @param password
+	 * @throws Exception
+	 */
 	public static void getConnectrion(String url,String userName,String password) throws Exception{
 		Class.forName("");
 		Connection conn = DriverManager.getConnection(url, userName, password);
