@@ -1,0 +1,7 @@
+1.安全性：statement存在sql注入的隐患：
+	sql = "select * from user_info where  userid="+userid+" and password="+password;
+	userid=" 1 and 1=1 --" ,password=null;
+	拼接的sql 为    select * from user_info where userid='1' and 1=1 --and password='1';
+2. preparedStatement  利用数据库缓冲任务池，会一定程度上加快类似sql的执行。
+3.preparedStatement 采用预编译sql，也避免了sql拼接过程中不必要的 空格、导致的错误。
+	
